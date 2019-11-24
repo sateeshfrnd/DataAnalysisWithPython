@@ -1,0 +1,1430 @@
+Q1. How can we create an iterator object from a list? 
+a)	Bypassing the given list to the iter() function 
+b)	By using a for a loop. 
+c)	By using a while loop. 
+d)	You cannot create an iterable object 
+
+Ans: A
+### ------------------------------------
+
+Q2. If the function contains at least of one “yield” statement, then it  
+ 	becomes ______ 
+ 
+        Choose one 
+a)	An iterable 
+b)	a generator function 
+c)	an anonymous function 
+d)	None of the above 
+
+Ans: B
+### ------------------------------------
+
+Q3. What is the output of the code? 
+ 
+mylist =  [1, 3, 6, 10]
+	 
+	a = (x**2 for x in mylist)	 
+	print(next(a), next(a))	 	
+  
+a)	1 3 
+b)	1 9 
+c)	1 9 36 100 
+d)	1 
+
+Ans: B 
+### ------------------------------------
+
+Q4. What are the criteria that must be met to create closure in Python? 
+a)	The program Must have the function inside the function. 
+b)	The nested function must refer to the value defined in the enclosing function. 
+c)	The enclosing function must return the nested 
+d)	All of the above. 
+ 
+Ans: D 
+### ------------------------------------
+
+Q5. What is the output of the code? 
+ 	def Foo(n):
+ 
+	    def multiplier(x):	 
+	        return x * n	 	
+	    return multiplier	 	
+	a = Foo(5)
+	b = Foo(5)
+ 		
+	print(a(b(2)))	 		
+a)	25. 
+b)	100 
+c)	10 
+d)	50
+
+Ans: D
+### ------------------------------------
+ 
+Q6. What is the output of the code? 
+ 
+def make_pretty(func):
+    def inner():
+        print("I got decorated")
+        func()
+	    return inner
+ 
+	def ordinary():	
+		print("I am ordinary") 	
+    		
+	pretty = make_pretty(ordinary)
+	pretty()	 		 
+ 
+a)	I got decorated 
+b)	I am pretty 
+c)	I got decorated     I am ordinary 
+d)	I am ordinary 
+    I got decorated 
+
+Ans: C
+### ------------------------------------	
+
+Q7: What is the more pythonic way to use getters and setters? 
+a)	Decorators 
+b)	Generators. 
+c)	Iterators 
+d)	@property 
+
+Ans: D 
+### ------------------------------------
+
+Q8. In Python, there is a built-in function property() that returns a property object. The property object has which of the methods? 
+a)	getter() and setter() 
+b)	getter(), setter() and delete() 
+c)	getter() and delete() 
+d)	setter() and delete() 
+
+Ans: B 
+### ------------------------------------
+
+Q9. Which of the following statement is true? 
+a)	You cannot chain multiple decorators in Python. 
+b)	Decorators don’t work with functions that take parameters. 
+c)	The @ symbol doesn’t have any use while using decorators. 
+d)	None of the above 
+
+Ans: D 
+### ------------------------------------
+
+Q10. For the following codes, which of the following statements is true? 
+	def printHello():	  
+	    print("Hello")	
+	a = printHello()	 	
+ 
+a)	Print Hello() is a function, and a is a variable. None of them are objects. 
+b)	Both printHello() and the reference to the same object. 
+c)	Print Hello() and the reference to different objects. 
+d)	Syntax error! You cannot assign function  Q11. What is the output of the program? 
+ 
+Ans: A
+### ------------------------------------
+
+Q11. What is the output of the program? 
+	def outerFunction(): 
+		global a 
+		a = 20 
+		def innerFunction(): 
+			global a 
+			a = 30 
+			print('a =', a) 
+	a = 10 
+	outerFunction() 
+	print('a =', a)
+a) a = 10 a = 30
+b) a = 10
+c) a = 2
+d) a = 30
+
+Ans: A = 20
+### ------------------------------------
+
+Q12. Which of the following statements is true? 
+a)	A class is a blueprint for the object. 
+b)	You can only make the single object from the given class 
+c)	Both statements are true. 
+d)	Neither statement is true. 
+
+Ans: C 
+### ------------------------------------
+
+Q13. What is the output of the code? 
+class Foo:
+	  def printLine(self, line='Python'):	 
+	    print(line)
+   		
+	o1 = Foo()
+	o1.printLine('Java')	 	
+a)	Python 
+b)	Line 
+c)	Java 
+d)	Java 
+Python 
+
+Ans: C
+### ------------------------------------
+ 
+Q14. What is the function of the __init__() function in Python? 
+ 
+a)	Initialises the class for use. 
+b)	This function is called, when the new object is instantiated 
+c)	Initialises all the data attributes to zero when called 
+d)	None of the above. 
+
+Ans: B 
+### ------------------------------------
+
+Q15. What is the output of the code? 
+ 
+class Point:
+	def __init__(self, x = 0, y = 0):
+		self.x = x+1
+		self.y = y+1
+		       		
+	p1 = Point()	 		
+	print(p1.x, p1.y)		
+ 
+a)	0 0 
+b)	1 1 
+c)	None None 
+d)	x y 
+
+Ans: B 
+### ------------------------------------
+
+Q16. Which of the following code used the inheritance feature? 
+a) 
+Class Foo:	 
+	Pass	 
+b) 
+class Foo(object): 
+	pass 
+class Hoo(object): 
+	pass
+c) 
+class Foo: 
+	pass 
+class Hoo(Foo): 
+	pass
+
+d) None of the above code. 
+
+Ans: C
+### ------------------------------------ 
+
+Q17 If you a class is derived from two different classes, it’s called ______ 
+a)	Multilevel inheritance 
+b)	Multiple Inheritance  
+c)	Hierarchical Inheritance 
+d)	Python Inheritance 
+
+Ans: B 
+### ------------------------------------
+
+Q18. Which of the following statements is true? 
+a)	In Python, the same operator may behave differently depends upon the operands. 
+b)	You can change the way operators which behave in Python. 
+c)	Special method __add()__ is called when + operator 
+d)	All of the above. 
+
+Ans: D 
+### ------------------------------------
+ 
+Q19. What is the output of the code? 
+class Point:
+	def __init__(self, x = 0, y = 0):
+		self.x = x
+		self.y = y
+		
+    def __sub__(self,other):
+		x = self.x + other.x 
+		y = self.y + other.y 
+		return Point(x,y) 
+		
+p1 = Point(3, 4) 
+p2 = Point(1, 2) 
+result = p1-p2 
+print(result.x, result.y)
+a)	2 2 
+b)	4 6 
+c)	0 0 
+d)	1 1 
+
+Ans: B 
+### ------------------------------------
+ 
+Q20. Opening a file in ‘a’ mode 
+a)	opens a file for reading 
+b)	opens a file for writing 
+c)	opens the file for appending, at the end of file 
+d)	opens a file for exclusive creation 
+
+Ans: C
+### ------------------------------------
+
+
+Q21. What does the following code do? 
+           f = open("test.txt") 
+a)	Opens test.txt file for both reading and writing 
+b)	Opens test.txt file for reading only 
+c)	Opens test.txt file for writing only 
+d)	Opens test.txt file in god mode 
+
+Ans: B
+### ------------------------------------
+
+
+Q22. Which of the codes closes files automatically if an exception  
+ 	occurs? 
+Choose one 
+a) 
+with open("test.txt", encoding = 'utf-8')  as  f:	 
+	# perform file operation	 	
+b) 
+try:
+    f = open("test.txt",encoding = 'utf-8')	 
+    # perform file operations	 	
+finally:
+    f.close()	 		
+ 
+c)	None of the above 
+d)	Both of the above 
+ 
+Ans: B
+### ------------------------------------
+ 
+Q23. For the following code, 
+1.	f = open('test.txt', 'r', encoding = 'utf-8') 
+2.	f.read() 
+Which of the following statement is true 
+a)	This program reads the content of the test.txt file. 
+b)	If test.txt contains a newline, read() will return the newline as ‘\n’. 
+c)	You can pass an integer to the read() method 
+d)	All of the above. 
+
+Ans: D 
+### ------------------------------------
+
+Q24. What does the following code do? 
+os.listdir() 
+a)	Prints the current working directory. 
+b)	Prints the current working directory. 
+c)	Prints all the directories and files inside the given directory 
+d)	Make a new directory 
+Ans: C
+### ------------------------------------
+
+Q25. Which of the following is correct? 
+a)	An exception is an error that occurs in the runtime. 
+b)	A syntax error is also an exception. 
+c)	An exception is used to exclude a block of code in python. 
+d)	All of the above. 
+
+Ans: D 
+### ------------------------------------
+
+Q26. What will happen if we try to open the file that doesn’t exist? 
+a)	A new file is created. 
+b)	Nothing will happen. 
+c)	An exception is raised. 
+d)	None of the above 
+
+Ans: C 
+### ------------------------------------
+
+Q27. What is the output of the code? 
+	number = 5.0	 
+	try:
+		r = 10/number	 
+	    print(r)	 	
+	except:
+ 		print("Oops! Error occurred.")	 
+ 
+a)	Oops! Error occurred 
+b)	2.0 
+c)	2.0 Oops! Error occurred. 
+d)	None object 
+
+Ans: B 
+### ------------------------------------
+
+Q28. What does the following code do? 
+	try:
+		# code that can raise an error	 
+		pass   		
+	except (TypeError, ZeroDivisionError):	 
+		print("Two")	 	
+ 
+a)	Prints Two if an exception occurs (doesn’t matter which exception). 
+b)	Prints Two if exception doesn’t occur. 
+c)	Prints Two if the TypeError or ZeroDivisionError exception occurs. 
+d)	Prints Two only if both TypeError and ZeroDivisionError exception occur. 
+
+Ans: C
+### ------------------------------------
+
+Q29. Which of the following statement is true? 
+a)	You cannot create custom exceptions in Python. 
+b)	You can create the user-defined exception by deriving a class from Exception class. 
+c)	You can create a user-defined exception by deriving a class from Error class. 
+d)	None of the above. 
+
+Ans: B
+### ------------------------------------
+
+Q30. Which of the following statement is true? 
+a)	Functions are used to create objects in Python. 
+b)	Functions make your program run faster. 
+c)	The function is a piece of code that can perform a specific task. 
+d)	All of the above 
+
+Ans: C
+### ------------------------------------
+ 
+Q31. What is the output of the code? 
+	def printLine(text):	 
+		print(text, 'is awesome.')	 
+	printLine('Python')	 	
+ 
+a)	Python 
+b)	Python is awesome. 
+c)	Text is awesome. 
+d)	Is awesome. 
+ 
+Ans: D
+### ------------------------------------
+
+Q32. If the return statement is not used inside the function, the function will return: 
+a)	0 
+b)	None object 
+c)	an arbitrary integer 
+d)	Error! Functions in Python must have a return statement. 
+
+Ans: B
+### ------------------------------------
+
+Q33. What is the output of the code? 
+	def greetPerson(*name): 
+		print('Hello', name) 
+		
+	greetPerson('Frodo', 'Sauron')
+a) 
+Hello Frodo 
+Hello Sauron 
+b)	Hello ('Frodo', 'Sauron') 
+c)	Hello Frodo 
+d)	Syntax Error! Great person() can take only one argument. 
+ 
+Ans: B
+### ------------------------------------
+ 
+Q34. What is a recursive function? 
+Choose one 
+a)	A function that calls all the functions in the program. 
+b)	A function that calls itself. 
+c)	A function that that calls all the functions in the program except itself. 
+d)	There is no such thing as a recursive function in Python. 
+
+Ans: B
+### ------------------------------------
+ 
+35. What is the output of the program? 
+	result = lambda x: x * x 
+		print(result(5)) 
+
+a) lambda x: x*x
+b)	10 
+c)	25 
+d)	5*5 
+ 
+Ans: C
+### ------------------------------------
+ 
+Q36. What is the output of the program? 
+	def Foo(x): 
+		if (x==1): 
+			return 1 
+		else: 
+			return x+Foo(x-1) 
+	
+	print(Foo(4)) 
+
+a) 10 
+b) 24
+c)	7 
+d)	1 
+
+Ans: A
+### ------------------------------------
+ 
+Q37. Suppose you need to print pi constant defined in the math module. Which of the following code can do this task? 
+ 
+a)	print(math.pi) 
+b)	print(pi) 
+c)  
+	from math import pi	 
+	print(pi)	 	
+d)	 
+ 	from math import pi	 
+	print(math.pi)	 	
+ 
+Ans: C
+### ------------------------------------
+ 
+38. Which operator is used in Python to import modules from the packages? 
+Choose one 
+a). operator 
+b)	* operator 
+c)	-> symbol 
+d)	, operator 
+
+Ans: A 
+### ------------------------------------
+
+Q39. What is the output of the code? 
+	numbers = [1, 3, 6] 
+	newNumbers = tuple(map(lambda x: x , numbers)) 
+	print(newNumbers)
+ 
+a)	[1, 3, 6] 
+b)	(1, 3, 6) 
+c)	[2, 6, 12] 
+d)	(2, 6, 12) 
+
+Ans: B 
+### ------------------------------------
+ 
+Q40. What is the output of the code? 
+	if None: 
+		print(“Hello”)
+ 
+a)	False 
+b)	Hello 
+c)	Nothing will be printed 
+d)	Syntax error 
+ 
+Ans: C
+### ------------------------------------
+
+Q41. The if-elif-else executes only one block of code among several blocks. 
+a)	True. 
+b)	False 
+c)	It depends on the expression used. 
+d)	There is no elif statement in Python. 
+
+Ans: C
+### ------------------------------------
+
+42. What is the output of the code? 
+	for i in [1, 0]: 
+		print(i+1)
+ 
+a)	2 
+   1 
+ 
+b)	[2, 1] 
+c)	2 
+    0 
+ 
+d)	[2, 0] 
+
+Ans: A
+### ------------------------------------ 
+ 
+Q43. In the Python, for and while loop can have the optional else statement? 
+a)	Only for loop can have the optional else statement 
+b)	Only while loop can have the optional else statement 
+c)	Both loops can have optional else statement 
+d)	Loops cannot have else statement in Python 
+
+Ans: B
+### ------------------------------------
+ 
+Q44. What is the output of the code? 
+	i = sum = 0 
+	while i <= 4: 
+		sum += i 
+		i = i+1 
+	print(sum)
+
+a) 0	
+b)	10 
+c)	4 
+d)	None of the above 
+
+Ans: B 
+### ------------------------------------
+
+Q45. What is the output of the code? 
+ 
+	while 4 == 4:	 
+	    print('4')	 	
+ 
+a)	4 is printed once 
+b)	4 is printed four times 
+c)	4 is printed infinitely until the program closes 
+d)	Syntax error 
+
+Ans: C
+### ------------------------------------
+ 
+Q46. Is it better to use the for loop instead of while if we are iterating through a sequence? 
+ 	 
+a)	No, it’s better to use the while loop. 
+b)	Yes, for loop is more pythonic choice. 
+c)	No, we cannot iterate through a sequence using a while loop. 
+d)	No, we cannot iterate through a sequence using loops. 
+
+Ans: B
+### ------------------------------------
+ 
+Q47. Which of the following statement is true? 
+a)	“break”- It terminates the loop containing it. 
+b)	“continue” - It is used to skip the rest of the code inside the loops. 
+c)	break and continue: These are almost always used with if, if...else and if...elif...else    statements. 
+d)	All of the above. 
+
+Ans: D
+### ------------------------------------
+ 
+Q48. What is the output of the code? 
+	for char in 'PYTHON STRING':	 
+		if char == ' ':	 	
+			break	 		
+	 			
+		print(char, end='')	 
+	   	
+		if char == 'O':	 	
+	      continue	 		
+ 
+a)	PYTHON 
+b)	PYTHONSTRING 
+c)	PYTHN 
+d)	STRING 
+
+Ans: C
+### ------------------------------------
+ 
+Q49. Which of the statement is true about the “pass”   	statement? 
+ 
+a)	Python interpreter- It ignores the “pass” statement like comments. 
+b)	Pass statement: It terminates the loop containing pass statement. 
+c)	It is used as the placeholder for future implementation of functions, loops, etc 
+d) All of the above. 
+
+Ans: C
+### ------------------------------------
+ 
+Q50. In regards to separated value files such as .csv and .tsv, what is   	the delimiter? 
+ 
+a) Anywhere the comma (,) character is used in the file.	 
+b) Delimiters are not used in separated value files.	 	
+c) Any character such as the comma (,	) or tab (\	t) that is used to separate the column data. 
+d)	Any character such as the comma (,) or tab (\t) that is used to separate the row data 
+ 
+Ans: C
+### ------------------------------------
+
+Q51. In separated value files such as .csv and .tsv, what does the first   	row in the file typically contain? 
+ 
+a)	The column names of the data. 
+b)	The author of the table data. 
+c)	The source of the data 
+d)	Notes about the table data 
+
+Ans: A
+### ------------------------------------
+
+Q52. Assume you have a file object 	my_data	, which has properly  opened a separated value file that uses the tab character (\t) as the delimiter. 
+What is the proper way to open the file using the Python 	CSV	 module and assign it to the variable csv_reader? 
+Assume that csv has already been imported. 
+a)	csv.tab_reader(my_data) 
+b)	csv.reader(my_data, delimiter='\t') 
+c)	csv.reader(my_data) 
+d)	csv.reader(my_data, tab_delimited=True) 
+
+Ans: B
+### ------------------------------------
+ 
+Q53. When iterating over an object returned from csv.reader(), what is returned with each iteration? 
+For example, given the following code block that assumes csv_reader is an object returned from csv.reader(), what would be printed to the console with each iteration? 
+for item in csv_reader: 
+    print(item) 
+ 
+a)	The full line of the file as a string 
+b)	The row data as a list 
+c)	The individual value data that is separated by the delimiter 
+d)	The column data as a list 
+
+Ans: A
+### ------------------------------------
+
+Q54. When writing to a CSV file using the .writerow() method of the csv.DictWriter object, what must each key in the input dict represent? Below is an example: 
+	with open('test_file.csv', mode='w') as csv_file: 
+		writer = csv.DictWriter(
+			csv_file,  
+			fieldnames=['first_col', 'second_col'] 
+		) 
+		writer.writeheader() 
+ 
+		# This input dictionary is what the question is referring     
+		# to and is not necessarily correct as shown. 
+		writer.writerow({'key1':'value1', 'key2':'value2'}) 
+ 
+a)	Each key indicates the row index as an integer for where the data should go 
+b)	Each key must match up to the field names (index names) used to identify the row data 
+c)	Each key must match up to the field names (column names) used to identify the column data 
+d)	Each key indicates the column index as an integer for where the value should go 
+ 
+Ans: C
+### ------------------------------------
+
+Q55. Which is the correct way to open the CSV file hrdata.csv for reading using the pandas package? Assume that the pandas   	package has already been imported. 
+ 
+a)	pandas.open_csv('hrdata.csv', 'r') 
+b)	pandas.read_table('hrdata.csv') 
+c)	pandas.read_csv('hrdata.csv') 
+d)	pandas.open('hrdata.csv','r') 
+
+Ans: C
+### ------------------------------------
+
+Q56. By default, pandas uses 0-based indices for indexing rows. Which   	is the correct way to import the CSV file hrdata.csv   	for reading and using the 'Name' column as the index row instead? 
+Below is the contents of hrdata.csv 
+Name,Hire Date,Salary,Sick Days remaining 
+Fred,10/10/10,10000,10 
+	 
+a)	pandas.read_csv('hrdata.csv', index_col='Name') 
+b)	pandas.read_csv('hrdata.csv', index=0, index_col_name='Name') 
+c)	pandas.read_csv('hrdata.csv', index='Name') 
+d)	pandas.read_csv('hrdata.csv', index_col=0) 
+
+Ans: A
+### ------------------------------------
+ 
+Q57. Given the file dog_breeds.txt, which of the following is the correct   way to open the file for reading as a text file? Select all that apply. a) open('dog_breeds.txt', 'w') 
+b)	open('dog_breeds.txt', 'r') 
+c)	open('dog_breeds.txt') 
+d)	open('dog_breeds.txt', 'wb') 
+e)	open('dog_breeds.txt', 'rb') 
+
+Ans: C
+### ------------------------------------
+ 
+Q58. Given the following directory structure: 
+
+animals/
+	|- feline/
+		|- lions.gif
+		|- tigers.gif
+	|- ursine/
+		|- bears.gif
+	|- animals.csv
+ 
+Assuming that the cwd is in the root folder where animals reside, what is the full path to the feline folder?
+
+Ans: animals/feline
+### ------------------------------------
+Q59 Given the file jack_russell.png, which of the following is the correct way to open the file for reading as a buffered binary file? 
+Select all that apply. 
+a) open('jack_russell.png', 'rb') 
+b) open('jack_russell.png', bytes=True) 
+c) open('jack_russell.png', 'r') 
+d) open('jack_russell.png') 
+e) open('jack_russell.png', 'wb')
+ 
+Ans:  A
+### ------------------------------------
+	
+Q60. Using the same directory structure as before: 
+ 
+animals/
+	|- feline/
+		|- lions.gif
+		|- tigers.gif
+	|- ursine/
+		|- bears.gif
+	|- animals.csv
+
+Assuming that the cwd is in the root folder where Animals reside, what is the full path to the file bears.gif?
+
+Ans: animals/ursine/bears.gif
+### ------------------------------------
+ 
+Q61. Whenever possible, what is the recommended way to ensure that a file object is properly closed after usage? 
+ 	 
+a) Making sure that you use the .close()	 method before the end of the script	 
+b) It doesn’t matter 
+c)	By using the try/finally block 
+d)	By using the with statement 
+
+Ans: C
+### ------------------------------------
+
+Q62. Using the same directory structure as before: 
+animals/
+	|- feline/
+		|- lions.gif
+		|- tigers.gif
+	|- ursine/
+		|- bears.gif
+	|- animals.csv
+	
+Assuming that the cwd is in the feline folder, what is the relative path to the file 	bears.gif	? 	
+
+Ans: ../animals/ursine/bears.gif
+### ------------------------------------
+ 
+Q63. When reading a file using the file object, what method is best for reading the entire file into a single string? 
+a) .read_file_to_str() 
+b) .read() 
+c) .readlines() 
+d) .readline()
+
+Ans: B  
+### ------------------------------------ 
+
+Q64.  The value 1.73 rounded to one decimal place using the “rounding   	up” strategy is… 
+a)	1.8 
+b)	1.7 
+
+Ans: A
+### ------------------------------------
+
+Q65. The value -2.961 rounded to two decimal places using the  
+ 	“rounding down” strategy is… 
+a)	-2.96 
+b)	-2.97 
+
+Ans: A
+### ------------------------------------
+
+Q66. When a value is truncated to 3 decimal places, which of the   	following is true? 
+a)	Positive numbers are rounded up, and negative numbers are rounded down. 
+b)	Positive numbers are rounded down, and negative numbers are rounded up. 
+c)	Both positive and negative numbers are rounded up. 
+d)	Both positive and negative numbers are rounded down. 
+
+Ans: D
+### ------------------------------------
+
+Q67. The value -0.045 rounded to 2 decimal places using the “round half   	away from zero” strategy is… 
+a)	-0.05 
+b)	-0.04 
+
+Ans: B
+### ------------------------------------
+
+Q68. Which rounding strategy does Python’s built-in round() function   	use? 
+a)	Round half down 
+b)	Round half away from zero 
+c)	Round half up 
+d)	Round half to even 
+
+Ans: A
+### ------------------------------------
+Q69. The value 4.65 rounded to one decimal place using the “round half   	to even” strategy is… 
+a)	4.6 
+b)	4.7 
+  
+Ans: B
+### ------------------------------------ 
+ 
+Q70. Which problem arises due to the multiple inheritances, if   	hierarchical inheritance is used previously for its base classes? 
+a) Diamond b) Circle c) Triangle d) Loop
+
+Ans: A
+### ------------------------------------
+ 
+Q71. How many classes should a program contain to implement the multiple inheritances? 
+a) Only 1 b) At least 1 c) At least 3 d) Exactly 3
+
+Ans: C
+### ------------------------------------
+
+Q72. If class a inherits class b and class c as “class a: public class b,  public class c {// class body ;}; ”, which class constructor will be  called first? 
+a) Class a. b) Class b. c) Class c. d) All together 
+
+Ans: B
+### ------------------------------------
+
+ 
+Q73.If all the members of all  base classes are private then, 
+a)	There won’t be any use of multiple inheritance 
+b)	It will make all members as public. 
+c)	Derived class can still access them in the multiple inheritance 
+d)	Compile-time error 
+
+Ans: A
+### ------------------------------------
+
+Q74. Can the derived class be made abstract if multiple inheritance is  used? 
+a)	No, because other classes must be abstract too 
+b)	Yes, if all the functions are implemented 
+c) Yes, if all the methods are predefined	 
+d) No, since constructors won’t be there	 
+
+Ans: B
+### ------------------------------------
+
+Q75. Which among the following best defines the multilevel inheritance? 
+a)	A class derived from another derived class 
+b)	Classes being derived from other derived classes 
+c)	Continuing single level inheritance 
+d)	Class which have more than one parent 
+
+Ans: B
+### ------------------------------------
+
+Q76. If there are 5 classes, E is derived from D, D from C, C from B and  B from A. Which class constructor will be called first if the object of  E or D is created? 
+a) A	 
+b) B
+c) C
+d) A and B
+
+Ans: A
+### ------------------------------------
+	 
+Q77. Which Class is having the highest degree of abstraction in multilevel inheritance of 5 levels? 
+a) Class at 1st level 
+b) Class 2nd last level 
+c) Class at 5th level 
+d) All with same abstraction
+
+Ans: A
+### ------------------------------------
+
+Q78. Multilevel inheritance allows _________________ in the program. 
+a)	Only 7 levels of inheritance 
+b)	At least 7 levels of inheritance 
+c)	At most 16 levels of inheritance 
+d)	As many levels of inheritance as required 
+
+Ans: D
+### ------------------------------------
+
+Q79. If all the classes used parameterized constructors and no default  constructor then, ___________ 
+a)	The object of lower-level classes can’t be created 
+b)	Object of lower-level classes must call parent class constructors explicitly 
+c)	Object of lower-level classes must define all the default constructors 
+d)	Only object of first-class can be created, which is first-parent 
+
+Ans: B
+### ------------------------------------
+ 
+Q80. Which is the universal exception handler class? 
+a) Object b) Math c) Errors d) Exceptions
+
+Ans: D
+### ------------------------------------
+ 
+Q81. What are two exception classes in the hierarchy of java exceptions  class? 
+a)	Runtime exceptions only 
+b)	Compile-time exceptions only 
+c)	Runtime exceptions and other exceptions 
+d)	Other exceptions 
+
+Ans: C
+### ------------------------------------
+
+Q82.  Which are the two blocks that are used to check error and handle  the error? 
+a) Try and catch b) Trying and catching c) Do and while d) TryDo and Check
+
+Ans: A
+### ------------------------------------
+ 
+Q83. To catch the exceptions ___________________ 
+a)	An object must be created to catch the exception 
+b)	A variable should be created to catch the exception 
+c)	An array should be created to catch all the exceptions 
+d)	A string has to be created to store exception 
+
+Ans: A
+### ------------------------------------
+ 
+Q84. 	Which class is used to handle the input and output exceptions?
+a) InputOutput b) InputOutputExceptions c) IOExceptions d) ExceptionsIO
+ 
+Ans: C
+### ------------------------------------
+ 
+Q85. Which among the following is true for the class exceptions? 
+a)	Only base class can give rise to the exceptions 
+b)	Only derived class can give rise to exceptions 
+c)	Either base or derived class may produce exceptions 
+d)	Both base class and derived class may produce exceptions 
+
+Ans: D
+### ------------------------------------
+
+Q86. If both base and derived class caught the exceptions, _____. 
+a)	Then catch block of a derived class must be defined before the base class 
+b)	Then catch block of the base class must be defined before the derived class 
+c)	Then catch block of base and derived classes don't matter. 
+d)	catch block of the base and derived classes are not mandatory to be defined 
+
+Ans: A
+### ------------------------------------
+
+Q87.  The catching of base class the exception _________ in java. 
+a)	After derived class is not allowed by the compiler 
+b)	Before derived class is not allowed by the compiler 
+c)	Before derived class is allowed 
+d)	After derived class can’t be done 
+
+Ans: B
+### ------------------------------------
+
+Q88.  Which of the following handles the undefined class in the program? 
+a) ClassNotFound b) NoClassException c) ClassFoundException d) ClassNotFoundException 
+
+Ans: D
+### ------------------------------------
+ 
+Q89. Which among the following is true? 
+a)	Only the base class catch the blocks are important. 
+b)	Only the derived class catch blocks are important. 
+c)	Both the base and derived class catch the blocks are important. 
+d)	If the base and derived classes both produce exceptions, the program doesn’t run. 
+
+Ans: B
+### ------------------------------------
+ 
+Q90. Which condition among the following might result in memory exception? 
+a)	False if conditions 
+b)	Nested if conditions that are all false 
+c)	Infinite loops 
+d)	The loop that runs exactly 99 times 
+
+Ans: C
+### ------------------------------------
+ 
+Q91. Which among the following is the correct definition for static   	member functions? 
+a)	Functions created to allocate the constant values to each object 
+b)	Functions made to maintain a single copy of member functions for all the objects 
+c)	Functions created to define the static members 
+d)	Functions made to manipulate the static programs 
+
+Ans: B
+### ------------------------------------
+ 
+Q92. The static member functions __________________ 
+a)	Having access to all the members of the class. 
+b)	Having access to only constant members of a class. 
+c)	Having access to only the static members of a class. 
+d)	Having direct access to all other class members also. 
+
+Ans: C
+### ------------------------------------
+ 
+Q93. Which is the correct syntax to access the static member functions   with a class name?  
+a)	className . functionName; 
+b)	className -> functionName; 
+c)	className : functionName; 
+d)	className :: functionName; 
+
+Ans: A
+### ------------------------------------
+
+Q94. The static members are ______________________
+a) Created with each new object.	 
+b) Created twice in the program.	 
+c)	Created as many times, the class is being used. 
+d)	Created and initialised, only once 
+ 
+Ans: D
+### ------------------------------------
+ 
+Q95. Which among the following is true?  
+a)	Static member functions can be overloaded. 
+b)	Static member functions can’t be overloaded. 
+c)	Static member functions can be overloaded using the derived classes. 
+d)	Static member functions are implicitly overloaded. 
+
+Ans: B
+### ------------------------------------
+ 
+Q96. The static member functions _______________ 
+a)	Can’t be declared const. 
+b)	Can’t be declared volatile. 
+c)	Can’t be declared const or volatile. 
+d)	Can’t be declared const, volatile, or constant volatile. 
+
+Ans: D
+### ------------------------------------
+
+Q97. Which among the following can’t be used to access the members in anyway? 
+a) Scope resolution. b) Arrow operator. c) Single colon. d) Dot operator. 
+
+Ans: C
+### ------------------------------------
+ 
+Q98. If static data member are made inline, ______________  
+a)	Those should be initialised outside of the class. 
+b)	Those can’t be initialised with the class. 
+c)	Those can be initialised within the class. 
+d)	Class members can't use those. 
+
+Ans: C
+### ------------------------------------
+
+Q99. The static data member _________________  
+a) It can be mutable.	 
+b) Can’t be mutable.	 
+c) Can’t be an integer.	 
+d) Can’t be characters.	 
+
+Ans: B
+### ------------------------------------
+ 
+Q100. We can use the static member functions and static data member __________________.	 
+a)	Even if a class object is not created 
+b)	Even if a class is not defined 
+c)	Even if a class doesn’t contain any static member 
+d)	Even if a class doesn’t have a complete definition 
+
+Ans: A
+### ------------------------------------
+
+Q101. Point out the wrong statement: 
+a)	ipython is an enhanced interactive python shell. 
+b)	Matplotlib: It enables us to plot graphics. 
+c)	rPy provides lots of scientific routines that work on top of NumPy. 
+d)	all of the mentioned. 
+
+Ans: C
+### ------------------------------------
+
+Q102.  The ________ function returns its argument with the modified      shape, whereas the ________ method modifies the array itself. 
+a) reshape, resize. b) resize, reshape. c) reshape2,resize. d) all of the mentioned.
+
+Ans: A 
+### ------------------------------------
+
+Q103. To create sequences of the numbers, NumPy provides a function __________ analogous to range that returns arrays instead of lists. 
+a) arrange. b) aspace. c) aline. d) all of the mentioned.
+
+Ans: A  
+### ------------------------------------
+
+Q104.  Point out the correct statement: 
+a)	NumPy main object is the Homogeneous -Multidimensional array. 
+b)	In Numpy, dimensions are called axes. 
+c)	Numpy array class is called ndarray. 
+d)	All of the Mentioned 
+
+Ans:  D
+### ------------------------------------
+
+
+Q105. Which of the following function stack 1D array as the   	columns into the 2D array? 
+a) row_stack. b) column_stack. c) com_stack. d) all of the mentioned.
+
+Ans: B
+### ------------------------------------
+ 
+Q106.  ndarray is also known as an alias array. 
+a) True b) False
+ 
+Ans: A 
+### ------------------------------------
+ 
+Q107. Which of the following method creates the new array object that  looks at the same data? 
+a) view. b) copy. c) paste. d) all of the mentioned
+ 
+Ans: A 
+### ------------------------------------
+ 
+Q108. Which of the functions can be used to combine the   different vectors to obtain the result for each n-uplet? 
+a) iid_. b) ix_. c) ixd_. d) all of the mentioned.
+
+Ans: B 
+### ------------------------------------
+
+Q109. ndarray.dataitemSize is the buffer containing actual   elements 
+a) True b) False
+
+Ans: A
+### ------------------------------------
+ 
+Q110. Which of the following is in the NumPy library? 
+a)	The n-dimensional array object 
+b)	The tools for  integrating C/C++ and the Fortran code 
+c)	Fourier transform 
+d)	all of the Mentioned 
+
+Ans: D 
+### ------------------------------------
+
+Q111. Which of the following sets the size of the buffer used in ufuncs ? 
+a) bufsize(size) b) setsize(size) c) setbufsize(size) d) all of the Mentioned
+
+Ans: C 
+### ------------------------------------
+ 
+Q112. Point out the wrong statement:  
+a)	A universal function is the function that operates upon the “ndarrays” in an element-by-element fashion 
+b)	In Numpy, universal functions are the instances of numpy.ufunction class 
+c)	Many of the built-in functions are implemented in compiled C code 
+d)	All of the Mentioned 
+
+Ans: B
+### ------------------------------------
+
+Q113. Which of the following attribute should be used while checking the  type combination input and output? 
+a) .types b) .type c) .class d) all of the Mentioned
+
+Ans: A
+### ------------------------------------
+ 
+Q114. Which of the following returns an array of “ones” with the same  shape and type as a given array? 
+a) all_like b) ones_like c) one_alike d) all of the Mentioned
+ 
+Ans: B 
+### ------------------------------------
+ 
+Q115. Point out the wrong statement:  
+a)	Each universal function takes an array input and produces array outputs 
+b)	Broadcasting is used throughout NumPy to decide how to handle the disparately 
+shaped arrays 
+c)	The output of the ufunc is necessarily a ndarray, if all the input arguments are ndarrays 
+d)	All of the Mentioned 
+
+Ans: C
+### ------------------------------------
+
+Q116. Which of the following set of a floating-point error callback   	function or a log object? 
+a) setter. b) settercall. c) setterstack. d) all of the mentioned.
+ 
+Ans: C
+### ------------------------------------
+ 
+Q117. Some ufuncs can take output arguments. 
+a) True b) False 
+Ans: B
+### ------------------------------------
+ 
+Q118. ___________ decompose the elements of x into the   	mantissa and the two’s exponent. 
+ 
+a) trunc	 
+b) fmod
+c) frexp	
+d) ldexp	
+ 
+Ans: B
+### ------------------------------------
+
+Q119. Which of the following function take the only a single value as input? 
+a) iscomplex. b) minimum. c) fmin. d) all of the mentioned.
+
+Ans: A
+### ------------------------------------
+
+Q120. The array object returned by the _array_prepare_ is passed to      ufunc for computation. 
+a) True b) False
+
+Ans: A 
+### ------------------------------------
+ 
+Q121. All pandas data structures are ___mutable but not always  
+a) size,value. b) semantic,size. c) value,size. d) none of the mentioned.
+
+Ans: C 
+### ------------------------------------
+ 
+Q122.  Point out the correct statement:  
+a)	Pandas consist of a set of the labelled array data structures 
+b)	Pandas consist of an integrated group by the engine for aggregating and the transforming data sets 
+c)	Pandas consist of moving window statistics 
+d)	All of the above mentioned. 
+
+Ans: D
+### ------------------------------------
+
+Q123. Which of the following statement will import the pandas? 
+a) import pandas as pd b) import panda as py c) import pandaspy as pd d) all of the Mentioned
+ 
+Ans: A 
+### ------------------------------------
+ 
+Q124. Which of the following object did we get after reading the CSV file?	 
+a) DataFrame. b) Character Vector. c) Panel. d) All of the Mentioned 
+
+Ans: A
+### ------------------------------------
+ 
+Q125. Point out the wrong statement:  
+a)	Series is 1D labelled homogeneously-typed array. 
+b)	DataFrame is a general 2D labelled, size-mutable tabular structure with the potentially heterogeneously-typed columns. 
+c)	The panel is generally 2D labelled, also a size-mutable array. 
+d)	None of the Mentioned. 
+ 
+Ans: C
+### ------------------------------------
+ 
+Q126. 	Which of the following library is similar to the pandas?
+a) numpy. b) RPy. c) OutPy. d) None of the mentioned.
+
+Ans: A 
+### ------------------------------------
+ 
+Q127. Panel is a container for the Series, and DataFrame is a   	container for DataFrame objects. 
+a) True b) False
+ 
+Ans: B 
+### ------------------------------------
+ 
+Q128. Which of the following is the prominent python “statistics and  econometrics library”? 
+a) Bokeh. b) Seaborn. c) Statsmodels. d) None of the mentioned.
+ 
+Ans: C
+### ------------------------------------
+ 
+Q129. Which of the following is the foundational exploratory visualisation  package for the R language in the pandas ecosystem? 
+a) yhat. b) Seaborn. c) Vincent. d) None of the mentioned
+ 
+Ans: A
+### ------------------------------------
+ 
+Q130. Pandas consist of static and the moving window linear and panel  regression. 
+a) True b) False 
+Ans: A
+### ------------------------------------
+ 
+Q131. Quandl API for Python wraps the __ REST API to   	returns the pandas DataFrames with time series indexes. 
+a) Quandl. b) PyDatastream. c) PyData. d) None of the Mentioned. 
+ 
+Ans: A
+### ------------------------------------
+ 
+Q132. Point out the correct statement: 
+a)	Statsmodels provides powerful statistics, econometrics, analysis and the modelling functionality which is out of pandas’ scope 
+b)	Vintage leverages pandas objects as an underlying data container for the computation 
+c)	Bokeh is a Python interactive visualisation library for the small datasets 
+d)	All of the Mentioned 
+
+Ans: C
+### ------------------------------------
+
+Q133.Which of the following library is used to retrieve and to acquire   	statistical data and metadata disseminated in SDMX 2.1? 
+a) pandaSDMX b) freedapi c) Geopandas. d) All of the Mentioned.
+ 
+Ans: A
+### ------------------------------------
+ 
+Q134. Which of the following provides the standard API for doing   	computations with MongoDB? 
+a) Blaze. b) Geopandas. c) FRED. d) All of the Mentioned.
+
+Ans: A
+### ------------------------------------
+
+Q135. Point out the wrong statement: 
+a)	qgrid is an interactive grid for sorting and the filtering DataFrames 
+b)	Pandas DataFrames implement _repr_html_ methods which are utilised by the IPython Notebook 
+c)	Spyder is a cross-platform Qt-based open-source R IDE 
+d)	None of the Mentioned 
+
+Ans: C
+### ------------------------------------
+
+Q136. Which of the following makes use of the pandas and returns   	data in a Series or DataFrame? 
+a) pandaSDMX. b) freedapi. c) OutPy. d) none of the mentioned. 
+ 
+Ans: B
+### ------------------------------------
+ 
+Q137. Spyder can introspect and display Pandas DataFrames. 
+a) True b) False
+ 
+Ans: B
+### ------------------------------------
+ 
+Q138. Which of the following is used for machine learning in the python? 
+a) sci-kit-learn. b) seaborn-learn. c) stats-learn. d) none of the mentioned.
+ 
+Ans: A
+### ------------------------------------
+ 
+Q139. The ________ project builds on top of the pandas and matplotlib   	to provide easy plotting of data. 
+a) yhat. b) Seaborn. c) Vincent. d) None of the mentioned.
+ 
+Ans: B
+### ------------------------------------
+ 
+Q140 x-ray brings the labelled data power of pandas to the physical  sciences. 
+a) True b) False
+
+Ans: A
+### ------------------------------------ 
+ 
+Q141. Which of the following is the base layer of all of the sparse  
+a) SArray. b) SparseArray. c) PyArray. d) None of the mentioned.
+
+Ans: B
+### ------------------------------------
+
+ 
+Q142.  Point out the correct statement. 
+a)	All of the standard pandas data structures have to_sparse method 
+b)	Any sparse object can be converted back to the standard dense form by calling the to_dense 
+c)	The sparse objects exist for memory efficiency reasons. 
+d)	All of the mentioned. 
+Ans: D
+### ------------------------------------
+
+
+Q143. Which of the following is not an indexed object? 
+a) SparseSeries. b) SparseDataFrame. c) SparsePanel. d) None of the mentioned
+
+Ans: D
+### ------------------------------------ 
+ 
+Q144. Which of the following list like data structure is used for managing  the dynamic collection of SparseArrays? 
+a) SparseList. b) GeoList. c) SparseSeries. d) All of the mentioned.
+
+Ans: A
+### ------------------------------------
+
+Q145.  Point out the wrong statement. 
+ 
+a)	to_array. append can accept scalar values or any 2-D sequence. 
+b)	Two kinds of SparseIndex are implemented. 
+c)	The integer format keeps an arrays of all locations, where the data are not equal to the fill value. 
+d)	None of the mentioned. 
+ 
+Ans: A
+### ------------------------------------
+
+Q146. Which of the following method used for transforming the  Sparse-series index by the MultiIndex to a  
+a) SparseSeries.to_coo(). b) Series.to_coo(). c) SparseSeries.to_cooser(). d) None of the mentioned.
+
+Ans: A
+### ------------------------------------
+	
+Q147. The integer format tracks only the locations and the sizes of   	blocks of data. 
+a) True b) False 
+Ans: B
+### ------------------------------------
+ 
+Q148. Which of the following is used for the testing for membership in   	the list of column names? 
+a) in. b) out. c) else if. d) none of the mentioned.
+ 
+Ans: A
+### ------------------------------------
+ 
+Q149. Which of the following indexing capabilities is used as the concise  means of selecting data from a pandas object? 
+a) In. b) ix. c) ipy. d) none of the mentioned.
+ 
+Ans: B
+### ------------------------------------
+ 
+Q150. Pandas follow the NumPy convention of raising an error when  you try to convert something to a bool. 
+a) True b) False
+
+Ans: A 
+### ------------------------------------
+ 
